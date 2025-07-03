@@ -462,3 +462,157 @@ a:active {
 .contact-form .cta-button:hover {
   opacity: 0.9;
 }
+/* Footer Section */
+.footer {
+  background-color: #071629;
+  height: 249px;
+  width: 100%;
+  padding: 95px 165px 0 165px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 161px;
+  height: 32px;
+}
+
+.footer-social {
+  width: 130px;
+  height: 30px;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.3157); /* 31.57% opacity */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Animation Keyframes */
+@keyframes resultFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation Enhancements for Results Section */
+.result-box {
+  animation: resultFadeIn 0.8s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-box:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.result-box:hover .result-percentage {
+  animation: bounceText 0.5s ease;
+}
+
+/* Optional: staggered animation delays */
+.result-box:nth-child(1) { animation-delay: 0.1s; }
+.result-box:nth-child(2) { animation-delay: 0.2s; }
+.result-box:nth-child(3) { animation-delay: 0.3s; }
+.result-box:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animation Keyframes */
+@keyframes resultFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Enhancements for What We Do Section */
+.icon-box {
+  width: 207px;
+  height: 180px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: scale(1.05);
+}
+
+/* Staggered delays for What We Do boxes */
+.icon-box:nth-child(1) { animation-delay: 0.2s; }
+.icon-box:nth-child(2) { animation-delay: 0.4s; }
+.icon-box:nth-child(3) { animation-delay: 0.6s; }
+.icon-box:nth-child(4) { animation-delay: 0.8s; }
+
+/* Animation Enhancements for Results Section */
+.result-box {
+  animation: resultFadeIn 0.8s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-box:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.result-box:hover .result-percentage {
+  animation: bounceText 0.5s ease;
+}
+
+/* Optional: staggered animation delays */
+.result-box:nth-child(1) { animation-delay: 0.1s; }
+.result-box:nth-child(2) { animation-delay: 0.2s; }
+.result-box:nth-child(3) { animation-delay: 0.3s; }
+.result-box:nth-child(4) { animation-delay: 0.4s; }

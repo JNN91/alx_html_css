@@ -1,0 +1,502 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff;
+  color: #071629;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:active {
+  color: #FF6565;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 800px;
+  width: 100%;
+  background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 32px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  position: relative;
+}
+
+.logo-wrapper {
+  position: static;
+  transform: none;
+}
+
+.logo {
+  width: 161px;
+  height: 32px;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.main-nav a {
+  font-size: 14px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  color: #FF6565;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.icon-close {
+  display: none;
+}
+
+.menu-open .icon-open {
+  display: none;
+}
+
+.menu-open .icon-close {
+  display: inline;
+}
+
+/* Hero Content */
+.hero-content {
+  width: 637px;
+  height: 313px;
+  text-align: center;
+  margin-top: 120px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 16px;
+  font-weight: 700;
+  width: 355px;
+  margin: 0 auto 40px;
+}
+
+.cta-button {
+  width: 162px;
+  height: 44px;
+  background-color: #FF6565;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  margin-bottom: 65px;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:active {
+  opacity: 0.9;
+}
+
+.hero-content p {
+  width: 637px;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* What We Do Section */
+.what-we-do {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #071629;
+  width: 190px;
+  height: 40px;
+  margin: 0 auto 20px;
+}
+
+.section-description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #071629;
+  max-width: 637px;
+  margin: 0 auto 60px;
+}
+
+.icon-grid {
+  display: flex;
+  justify-content: center;
+  gap: 58px;
+  max-width: 1002px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  width: 207px;
+  height: 180px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 40px;
+  color: #FF6565;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.icon-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #071629;
+  margin-bottom: 8px;
+}
+
+.icon-description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #071629;
+  line-height: 22px;
+  width: 207px;
+  height: 52px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    text-align: center;
+    z-index: 5;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  .main-nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 200px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h2 {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .icon-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* Already defined: Reset, Hero, Header, What We Do styles... */
+
+.our-results {
+  background: url('images/headphones_hero_2.jpg') no-repeat center center/cover;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-overlay {
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.results-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.results-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  max-width: 637px;
+  margin: 0 auto 56px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.results-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.result-box {
+  position: relative;
+  width: 190px;
+  height: 190px;
+}
+
+.pentagon-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.result-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.result-percentage {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-bottom: 6px;
+}
+
+.result-label {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/* Contact Us Section */
+.contact-section {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #071629;
+  width: 146px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  width: 335px;
+  height: 373px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: #071629;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 334px;
+  height: 29px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin-bottom: 45px;
+  padding: 4px 0;
+  background: transparent;
+  outline: none;
+}
+
+.contact-form input#message {
+  margin-bottom: 56px;
+}
+
+/* Reuse CTA button style from hero */
+.contact-form .cta-button {
+  width: 162px;
+  height: 44px;
+  background-color: #FF6565;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.3s ease;
+
+  /*  Center inside form */
+  margin: 0 auto;
+
+  /*  Center label inside button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-form .cta-button:hover {
+  opacity: 0.9;
+}
+/* Footer Section */
+.footer {
+  background-color: #071629;
+  height: 249px;
+  width: 100%;
+  padding: 95px 165px 0 165px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 161px;
+  height: 32px;
+}
+
+.footer-social {
+  width: 130px;
+  height: 30px;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.3157); /* 31.57% opacity */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  margin-top: 60px;
+  text-align: center;
+}

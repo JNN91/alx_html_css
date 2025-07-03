@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
 
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="2-styles.css" />
+  <link rel="stylesheet" href="8-styles.css" />
   <link rel="stylesheet" href="icon.css" />
 </head>
 <body>
@@ -121,16 +120,38 @@
       </div>
     </div>
   </section>
+  <!-- Contact Us Section -->
+<section class="contact-section">
+  <h2 class="contact-title">Contact us</h2>
+  <form class="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="">
+
+    <label for="message">Your message</label>
+    <input type="text" id="message" name="message" placeholder="">
+
+    <button type="submit" class="cta-button">CALL TO ACTION</button>
+  </form>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo_headphones.png" alt="Headphones Logo" class="footer-logo" />
+    </div>
+
+    <div class="footer-right">
+      <img src="images/social.png" alt="Social Media Icons" class="footer-social" />
+    </div>
+  </div>
+  <p class="footer-copy">©headphones 2020</p>
+</footer>
+
 
   <!-- Script -->
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('show');
-      toggleBtn.classList.toggle('menu-open');
-    });
-  </script>
+  <script src="8-script.js"></script>
 </body>
 </html>
